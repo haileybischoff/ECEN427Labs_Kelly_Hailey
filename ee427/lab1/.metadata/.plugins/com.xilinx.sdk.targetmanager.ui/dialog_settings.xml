@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="C:\Users\superman\Desktop\ee427\lab1\lab1_hw_platform\system_bd.bmm" key="lab1_hw_platform-bmmFile"/>
+	<item value="C:\Users\superman\Desktop\ee427\lab1\lab1_hw_platform\system.bit" key="lab1_hw_platform-bitFile"/>
+	<item value="C:\Users\superman\Desktop\ee427\lab1\hello_world_0\Debug\hello_world_0.elf" key="lab1_hw_platform-microblaze_0-initElf"/>
+</section>

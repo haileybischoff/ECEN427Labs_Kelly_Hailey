@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include "platform.h"
+
+
+int main() {
+
+	uint previous = 0;
+	uint current = 1;
+	uint summed = 0;
+
+	for(uint i = 0; i <=15; i++){
+		summed = previous + current;
+		previous = current;
+		current = summed;
+		xil_printf(current);
+	}
+
+
+}

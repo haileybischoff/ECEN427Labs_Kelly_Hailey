@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include "platform.h"
+#include <stdint.h>
+
+int main() {
+    init_platform();
+
+	uint8_t previous = 0;
+	uint8_t current = 1;
+	uint8_t summed = 0;
+	uint8_t i = 0;
+	for(i; i <=15; i++){
+		xil_printf("%d, ", current);
+		summed = previous + current;
+		previous = current;
+		current = summed;
+	}
+	xil_print("\n\r");
+    cleanup_platform();
+	return 0;
+
+}
