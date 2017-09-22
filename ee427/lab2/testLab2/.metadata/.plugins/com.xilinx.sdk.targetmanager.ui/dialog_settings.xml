@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="C:\Users\superman\Documents\GitHub\ECEN427Labs_Kelly_Hailey\ee427\lab2\testLab2\testLab2_hw_platform\system_bd.bmm" key="testLab2_hw_platform-bmmFile"/>
+	<item value="C:\Users\superman\Documents\GitHub\ECEN427Labs_Kelly_Hailey\ee427\lab2\testLab2\testLab2_hw_platform\system.bit" key="testLab2_hw_platform-bitFile"/>
+	<item value="C:\Users\superman\Documents\GitHub\ECEN427Labs_Kelly_Hailey\ee427\lab2\testLab2\hello_world_0\Debug\hello_world_0.elf" key="testLab2_hw_platform-microblaze_0-initElf"/>
+</section>
