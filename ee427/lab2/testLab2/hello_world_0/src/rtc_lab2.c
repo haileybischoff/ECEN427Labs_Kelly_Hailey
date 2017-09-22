@@ -11,7 +11,8 @@
 #include "mb_interface.h"   // provides the microblaze interrupt enables, etc.
 #include "xintc_l.h"        // Provides handy macros for the interrupt controller.
 #include <stdint.h>
-#define ONE_SECOND 100 // 1 second or (100 miliseconds * 10) //TODO
+#define ONE_SECOND 100 // 1 second or (100 * 10 miliseconds)
+#define HALF_SECOND 50 // 1/2 second or (50 * 10 miliseconds)
 #define RESET 0 //
 #define TRUE 1
 #define FALSE 0
@@ -23,7 +24,7 @@
 #define MINUTE_BUTTON_MASK 1
 #define SECOND_BUTTON_MASK 2
 #define INITIAL_HOURS 23
-#define INITIAL_MINUTES 59
+#define INITIAL_MINUTES 58
 #define INITIAL_SECONDS 55
 #define INCREMENT_BUTTON_MASK 16
 #define DECREMENT_BUTTON_MASK 4
@@ -38,6 +39,9 @@ static u32 currentButtonState = RESET; //static u32 currentButtonState = RESET;
 static u32 previousButtonState = RESET; //static u32 previousButtonState = RESET;
 static uint8_t button_pushed_flag = FALSE; //static int button_pushed_flag = FALSE;
 u32 getCurrentButtonState();
+bool decrement_flag = FALSE; //	int decrement_flag;
+bool increment_flag = FALSE; //	int increment_flag;
+
 
 // This is invoked in response to a timer interrupt.
 // It does 2 things: 1) debounce switches, and 2) advances the time.
@@ -52,8 +56,8 @@ void timer_interrupt_handler() {
 	bool hour_flag; //	int hour_flag;
 	bool min_flag; //	int min_flag;
 	bool sec_flag; //	int sec_flag;
-	bool decrement_flag; //	int decrement_flag;
-	bool increment_flag; //	int increment_flag;
+	uint8_t count_auto;
+	bool auto_flag;
 
 	// Action states
 	switch (current_state){
@@ -69,6 +73,8 @@ void timer_interrupt_handler() {
 		sec_flag = FALSE;
 		decrement_flag = FALSE;
 		increment_flag = FALSE;
+		count_auto = RESET;
+		auto_flag = FALSE;
 		break;
 	case idle:
 		count_milisec++;
@@ -76,10 +82,6 @@ void timer_interrupt_handler() {
 
 		break;
 	case update_time:
-		//if(hour_flag || min_flag || sec_flag){
-
-		//}
-
 			seconds++;
 			if(seconds >= MINUTES_AND_SECONDS_TURNOVER){
 				minutes++;
@@ -92,25 +94,18 @@ void timer_interrupt_handler() {
 			if(hours >= HOURS_TURNOVER){
 				hours = RESET;
 			}
-		//}
 		xil_printf("\r%02d:%02d:%02d", hours, minutes, seconds);
 		break;
 	case debounce:
-//		if(button_pushed_flag == TRUE){
-//			debounce_count = RESET;
-//		}
 		if(myButtonValue != 0){
 			debounce_count++;
-		}//else{
-		//	debounce_count = RESET;
-		//}
+		}
 		break;
 	case check_value:
+		count_auto++;
 		hour_flag = FALSE;
 		min_flag = FALSE;
 		sec_flag = FALSE;
-		decrement_flag = FALSE;
-		increment_flag = FALSE;
 		if(myButtonValue & HOUR_BUTTON_MASK){
 			hour_flag = TRUE;
 		}
@@ -120,14 +115,9 @@ void timer_interrupt_handler() {
 		if(myButtonValue & SECOND_BUTTON_MASK){
 			sec_flag = TRUE;
 		}
-		if(myButtonValue & DECREMENT_BUTTON_MASK){
-			decrement_flag = TRUE;
-		}
-		if(myButtonValue & INCREMENT_BUTTON_MASK){
-			increment_flag = TRUE;
-		}
 		break;
 	case button_update_time:
+		count_auto++;
 		if(increment_flag && !decrement_flag){
 			if(hour_flag){
 				hours++;
@@ -200,33 +190,57 @@ void timer_interrupt_handler() {
 		current_state = idle;
 		break;
 	case debounce:
-		if(debounce_count == DEBOUNCE_TIME){
+		if(debounce_count >= DEBOUNCE_TIME){
 			//button_pushed_flag = TRUE; // Setting the button was pushed flag. added by kelly
 			current_state = check_value;
 		}
-		if(myButtonValue == 0){
+		if(myButtonValue == RESET){
 			count_milisec = RESET;
 			button_pushed_flag = FALSE;
 			current_state = idle;
 		}
-		//else{
-		//	current_state = update_time;
-		//}
 		break;
 	case check_value:
-	//	if(button_pushed_flag == TRUE){
-		//	button_pushed_flag = FALSE;
-			//debounce_count = RESET;
-	//		current_state = debounce;
-		//}
-		//else{
-			button_pushed_flag = false;
-			current_state = button_update_time;
-	//	}
+		if(auto_flag){
+			if(count_auto >= HALF_SECOND){
+				count_auto = RESET;
+				current_state = button_update_time;
+			}
+		}
+		else{
+			if(count_auto >= ONE_SECOND){
+				if (increment_flag && (!decrement_flag)){
+					auto_flag = TRUE;
+					count_auto = RESET;
+					current_state = button_update_time;
+				}
+				else if(decrement_flag && (!increment_flag)){
+					auto_flag = TRUE;
+					count_auto = RESET;
+					current_state = button_update_time;
+				}
+				else{
+					button_pushed_flag = false;
+					auto_flag = FALSE;
+					current_state = button_update_time;
+				}
+			}
+			else{
+				button_pushed_flag = false;
+				auto_flag = FALSE;
+				current_state = button_update_time;
+			}
+		}
 		break;
 	case button_update_time:
-		count_milisec = RESET;
-		current_state = idle;
+		if(auto_flag){
+			current_state = debounce;
+		}
+		else{
+			count_auto = RESET;
+			count_milisec = RESET;
+			current_state = idle;
+		}
 		break;
 	default:
 		xil_printf("bad stuff happened\n\r");
@@ -256,6 +270,18 @@ void pb_interrupt_handler() {
   //if((currentButtonState != previousButtonState) && (currentButtonState > previousButtonState)){
 	//  previousButtonState = currentButtonState;
 	  button_pushed_flag = TRUE; // Setting the button was pushed flag.
+		if(currentButtonState & DECREMENT_BUTTON_MASK){
+			decrement_flag = TRUE;
+		}
+		else{
+			decrement_flag = FALSE;
+		}
+		if(currentButtonState & INCREMENT_BUTTON_MASK){
+			increment_flag = TRUE;
+		}
+		else{
+			increment_flag = FALSE;
+		}
   //}
   //else if(currentButtonState != previousButtonState){
 //	  previousButtonState = currentButtonState;
