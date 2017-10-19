@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="13" version="2.0">
+<workbench progressCount="20" version="2.0">
 <workbenchAdvisor/>
-<window height="1160" minimized="true" width="1472" x="-5" y="0">
+<window height="1160" maximized="true" width="966" x="-5" y="0">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -16,7 +16,7 @@
 <coolItem id="org.eclipse.cdt.ui.buildConfigActionSet" itemType="typeToolBarContribution" x="89" y="22"/>
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="129" y="22"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="22"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="84" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="38" y="22"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
@@ -53,11 +53,11 @@
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="xgpio.h" partName="xgpio.h" path="C:/Users/superman/Documents/GitHub/ECEN427Labs_Kelly_Hailey/ee427/lab2/testLab2/hello_world_bsp_0/microblaze_0/libsrc/gpio_v3_00_a/src/xgpio.h" title="xgpio.h" tooltip="hello_world_bsp_0/microblaze_0/libsrc/gpio_v3_00_a/src/xgpio.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/hello_world_bsp_0/microblaze_0/libsrc/gpio_v3_00_a/src/xgpio.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="6774" selectionTopPixel="1530"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4867" selectionTopPixel="1530"/>
 </editor>
 <editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="rtc_lab2.c" partName="rtc_lab2.c" path="C:/Users/superman/Documents/GitHub/ECEN427Labs_Kelly_Hailey/ee427/lab2/testLab2/hello_world_0/src/rtc_lab2.c" title="rtc_lab2.c" tooltip="hello_world_0/src/rtc_lab2.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/hello_world_0/src/rtc_lab2.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="9177" selectionOffset="0" selectionTopPixel="3967"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4927" selectionTopPixel="2142"/>
 </editor>
 </editors>
 <views>
@@ -100,11 +100,10 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Warnings (3 items)"/>
-<category IMemento.internal.id="Errors"/>
 <category IMemento.internal.id="Warnings"/>
+<category IMemento.internal.id="Errors"/>
 </expanded>
-<columnWidths org.eclipse.ui.ide.locationField="64" org.eclipse.ui.ide.markerType="94" org.eclipse.ui.ide.pathField="124" org.eclipse.ui.ide.resourceField="94" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
+<columnWidths org.eclipse.ui.ide.locationField="0" org.eclipse.ui.ide.markerType="0" org.eclipse.ui.ide.pathField="0" org.eclipse.ui.ide.resourceField="0" org.eclipse.ui.ide.severityAndDescriptionField="0"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
@@ -308,7 +307,7 @@
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.30689207" ratioLeft="236" ratioRight="533" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
-<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.75" ratioLeft="1434" ratioRight="478" relationship="2" relative="org.eclipse.ui.editorss">
+<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.8658147" ratioLeft="813" ratioRight="126" relationship="2" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.cdt.dsf.gdb.ui.tracecontrol.view" label="LabelNotFound"/>
@@ -342,158 +341,156 @@
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/hello_world_0/src/rtc_lab2.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/hello_world_bsp_0/microblaze_0/libsrc/gpio_v3_00_a/src/xgpio.h"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.binaryEditor" uri="file:/C:/Users/superman/AppData/Local/GitHubDesktop/GitHubDesktop.exe"/>
 </editors>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="2943" y="0"/>
+<position info="not_deleted" x="5291" y="0"/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="4974" y="0"/>
+<position info="not_deleted" x="4539" y="0"/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="2943" y="0"/>
-</item>
-<item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="2042" y="0"/>
-</item>
-<item historyLabel="xgpio.h" index="1">
-<position info="not_deleted" x="6774" y="0"/>
-</item>
-<item historyLabel="GitHubDesktop.exe" index="2">
 <position/>
 </item>
-<item historyLabel="xgpio.h" index="1">
-<position info="not_deleted" x="6774" y="0"/>
+<item historyLabel="rtc_lab2.c" index="0">
+<position/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="0" y="0"/>
+<position/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="3195" y="0"/>
+<position/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="5945" y="0"/>
+<position/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="1743" y="0"/>
+<position/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="5785" y="0"/>
+<position/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="9091" y="0"/>
+<position/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="8334" y="0"/>
+<position/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="3106" y="0"/>
+<position/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="3133" y="0"/>
+<position/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="3167" y="5"/>
+<position/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="3206" y="0"/>
+<position/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="3133" y="0"/>
+<position/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="8334" y="0"/>
+<position/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="5067" y="0"/>
+<position/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="3106" y="0"/>
+<position/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="3133" y="0"/>
+<position/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="4689" y="0"/>
+<position/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="5094" y="0"/>
+<position/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="5880" y="0"/>
+<position/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="8077" y="0"/>
+<position/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="8255" y="0"/>
+<position/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="8310" y="0"/>
+<position/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="3106" y="0"/>
+<position/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="3133" y="0"/>
+<position/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="4689" y="0"/>
+<position/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="4670" y="0"/>
+<position/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="3106" y="0"/>
+<position/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="3133" y="0"/>
+<position info="not_deleted" x="1958" y="0"/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="3106" y="0"/>
+<position info="not_deleted" x="1955" y="0"/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="3636" y="0"/>
+<position info="not_deleted" x="2133" y="0"/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="3712" y="0"/>
+<position info="not_deleted" x="2130" y="0"/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="3682" y="0"/>
+<position info="not_deleted" x="4970" y="0"/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="3714" y="0"/>
+<position info="not_deleted" x="3954" y="0"/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="4689" y="0"/>
+<position info="not_deleted" x="3513" y="0"/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="5459" y="0"/>
+<position info="not_deleted" x="3950" y="0"/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="5511" y="0"/>
+<position info="not_deleted" x="3386" y="0"/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="5496" y="0"/>
+<position info="not_deleted" x="3945" y="0"/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="5530" y="0"/>
+<position info="not_deleted" x="4970" y="0"/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="5374" y="0"/>
+<position info="not_deleted" x="4967" y="0"/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="5283" y="0"/>
+<position info="not_deleted" x="4232" y="0"/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="1696" y="0"/>
+<position info="not_deleted" x="4967" y="0"/>
 </item>
 <item historyLabel="rtc_lab2.c" index="0">
-<position info="not_deleted" x="3749" y="0"/>
+<position info="not_deleted" x="4661" y="0"/>
+</item>
+<item historyLabel="rtc_lab2.c" index="0">
+<position info="not_deleted" x="4967" y="0"/>
+</item>
+<item historyLabel="rtc_lab2.c" index="0">
+<position info="not_deleted" x="4923" y="0"/>
+</item>
+<item historyLabel="rtc_lab2.c" index="0">
+<position info="not_deleted" x="4918" y="0"/>
 </item>
 <item active="true" historyLabel="rtc_lab2.c" index="0">
-<position/>
+<position info="not_deleted" x="4923" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -501,12 +498,6 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
-<trimArea IMemento.internal.id="16384">
-<trimItem IMemento.internal.id="topLeft"/>
-</trimArea>
-<trimArea IMemento.internal.id="131072">
-<trimItem IMemento.internal.id="topRight"/>
-</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -514,7 +505,6 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
-<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@1c236934"/>
 </trimArea>
 </trimLayout>
 </window>

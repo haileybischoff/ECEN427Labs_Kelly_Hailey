@@ -1,0 +1,14 @@
+#Sun Sep 24 03:04:30 MDT 2017
+com.xilinx.sdk.linkgen.prefs.print_aliens_test_1\:Stack=microblaze_0_i_bram_ctrl_microblaze_0_d_bram_ctrl
+com.xilinx.sdk.linkgen.prefs.print_aliens_test_1\:.sdata=microblaze_0_i_bram_ctrl_microblaze_0_d_bram_ctrl
+com.xilinx.sdk.linkgen.prefs.print_aliens_test_1\:Stack-size=4096
+com.xilinx.sdk.linkgen.prefs.print_aliens_test_1\:Heap=microblaze_0_i_bram_ctrl_microblaze_0_d_bram_ctrl
+com.xilinx.sdk.linkgen.prefs.print_aliens_test_1\:Heap-size=1024
+com.xilinx.sdk.linkgen.prefs.print_aliens_test_1\:.text=microblaze_0_i_bram_ctrl_microblaze_0_d_bram_ctrl
+com.xilinx.sdk.linkgen.prefs.print_aliens_test_1\:.sdata2=microblaze_0_i_bram_ctrl_microblaze_0_d_bram_ctrl
+com.xilinx.sdk.linkgen.prefs.print_aliens_test_1\:.rodata=microblaze_0_i_bram_ctrl_microblaze_0_d_bram_ctrl
+eclipse.preferences.version=1
+com.xilinx.sdk.linkgen.prefs.print_aliens_test_1\:.sbss=microblaze_0_i_bram_ctrl_microblaze_0_d_bram_ctrl
+com.xilinx.sdk.linkgen.prefs.print_aliens_test_1\:.sbss2=microblaze_0_i_bram_ctrl_microblaze_0_d_bram_ctrl
+com.xilinx.sdk.linkgen.prefs.print_aliens_test_1\:.bss=microblaze_0_i_bram_ctrl_microblaze_0_d_bram_ctrl
+com.xilinx.sdk.linkgen.prefs.print_aliens_test_1\:.data=microblaze_0_i_bram_ctrl_microblaze_0_d_bram_ctrl

@@ -2,9 +2,9 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="257" key="DIALOG_WIDTH"/>
-		<item value="335" key="DIALOG_Y_ORIGIN"/>
+		<item value="353" key="DIALOG_Y_ORIGIN"/>
 		<item value="380" key="DIALOG_HEIGHT"/>
-		<item value="840" key="DIALOG_X_ORIGIN"/>
+		<item value="1104" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
@@ -13,8 +13,12 @@
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="xil_printf" key="selection"/>
+		<item value="inc_dec_count" key="selection"/>
 		<list key="findhistory">
+			<item value="inc_dec_count"/>
+			<item value="button_Pushed"/>
+			<item value="buttonPushed"/>
+			<item value="count_milisec"/>
 			<item value="xil_printf"/>
 			<item value="print"/>
 		</list>

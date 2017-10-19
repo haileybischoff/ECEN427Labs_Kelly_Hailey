@@ -5,7 +5,6 @@ make all
 Building file: ../src/rtc_lab2.c
 Invoking: MicroBlaze gcc compiler
 mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp_0/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.20.b -mno-xl-soft-mul -MMD -MP -MF"src/rtc_lab2.d" -MT"src/rtc_lab2.d" -o"src/rtc_lab2.o" "../src/rtc_lab2.c"
-../src/rtc_lab2.c:39: warning: 'previousButtonState' defined but not used
 Finished building: ../src/rtc_lab2.c
 ' '
 Building target: hello_world_0.elf
@@ -16,7 +15,7 @@ Finished building target: hello_world_0.elf
 Invoking: MicroBlaze Print Size
 mb-size hello_world_0.elf  |tee "hello_world_0.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   9206	    392	   2146	  11744	   2de0	hello_world_0.elf
+   8746	    392	   2158	  11296	   2c20	hello_world_0.elf
 Finished building: hello_world_0.elf.size
 ' '
 Invoking: Xilinx ELF Check
